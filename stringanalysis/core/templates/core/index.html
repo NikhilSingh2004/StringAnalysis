@@ -25,6 +25,8 @@
                 <option value="count">Count Char</option>
                 <option value="reverse">Reverse String</option>
                 <option value="words">Words Count</option>
+                <option value="upper">Upper Case</option>
+                <option value="lower">Lower Case</option>
             </select>
 
             <input type="submit" value="Submit" class="btn btn-primary">
@@ -52,6 +54,22 @@
         <div class="mb-3">
             <h1>Total Words Count : {{ words }}</h1>
             <p>Words: {{ words_count | join:", " }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if upper %}
+    <div class="container">
+        <div class="mb-3">
+            <h3>Upper Case : {{ upper }}</h3>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if lower %}
+    <div class="container">
+        <div class="mb-3">
+            <h3>Lower Case : {{ lower }}</h3>
         </div>
     </div>
     {% endif %}
